@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Pal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Welcome Page -->
+        <div id="welcome-page" class="page">
+            <header>
+                <h1>Fitness Pal</h1>
+                <p class="subtitle">Your personal workout companion</p>
+            </header>
+            <div class="content">
+                <h2>Transform Your Body</h2>
+                <button id="get-started-btn" class="btn btn-green">Get Started</button>
+            </div>
+        </div>
+
+        <!-- Auth Page -->
+        <div id="auth-page" class="page hidden">
+            <div class="auth-container">
+                <h2 class="auth-title">Welcome to Fitness Pal</h2>
+                
+                <!-- Login Form -->
+                <div id="login-form" class="auth-form">
+                    <div class="input-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" placeholder="Enter your username">
+                    </div>
+                    <div class="input-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter your password">
+                    </div>
+                    <button id="login-btn" class="btn btn-green">Sign In</button>
+                    <p class="auth-switch">New user? <span id="show-signup">Sign up here</span></p>
+                </div>
+
+                <!-- Signup Form -->
+                <div id="signup-form" class="auth-form hidden">
+                    <div class="input-group">
+                        <label for="new-username">Username</label>
+                        <input type="text" id="new-username" placeholder="Choose a username">
+                    </div>
+                    <div class="input-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" placeholder="Your phone number">
+                    </div>
+                    <div class="input-group">
+                        <label for="new-password">Password</label>
+                        <input type="password" id="new-password" placeholder="Create a password">
+                    </div>
+                    <div class="input-group">
+                        <label for="confirm-password">Confirm Password</label>
+                        <input type="password" id="confirm-password" placeholder="Confirm your password">
+                    </div>
+                    <button id="signup-btn" class="btn btn-green">Sign Up</button>
+                    <p class="auth-switch">Already have an account? <span id="show-login">Sign in here</span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Workout Selection Page -->
+        <div id="workout-selection-page" class="page hidden">
+            <h2 class="page-title">Choose Your Workout Focus</h2>
+            <div class="workout-cards">
+                <div class="workout-card" data-target="chest">
+                    <h3>Chest</h3>
+                    <p>Build a powerful upper body</p>
+                </div>
+                <div class="workout-card" data-target="back">
+                    <h3>Back</h3>
+                    <p>Strengthen your posterior chain</p>
+                </div>
+                <div class="workout-card" data-target="abs">
+                    <h3>Abs</h3>
+                    <p>Core strengthening exercises</p>
+                </div>
+                <div class="workout-card" data-target="legs">
+                    <h3>Legs</h3>
+                    <p>Develop strong foundational muscles</p>
+                </div>
+                <div class="workout-card" data-target="glutes">
+                    <h3>Glutes</h3>
+                    <p>Sculpt and strengthen</p>
+                </div>
+                <div class="workout-card" data-target="full body">
+                    <h3>Full Body</h3>
+                    <p>Complete workout session</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Workout Details Page -->
+        <div id="workout-details-page" class="page hidden">
+            <button id="back-btn" class="back-btn">← Back</button>
+            <h2 id="workout-category-title" class="page-title">Workout Details</h2>
+            <div id="workout-exercises" class="workout-exercises"></div>
+        </div>
+    </div>
+
+    <div id="notification" class="notification hidden">
+        <span id="notification-message"></span>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
