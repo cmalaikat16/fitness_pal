@@ -42,7 +42,7 @@ docker build -t fitness-pal .
 # 2. Run container
 docker run -dp 3000:3000 fitness-pal
 
-📂 Project Structure
+## 📂 Project Structure
 
 fitness_pal/
 ├── index.html          # Main app entry
@@ -52,7 +52,7 @@ fitness_pal/
 ├── Dockerfile          # Container config
 └── assets/             
 
-🔧 How to Customize
+## 🔧 How to Customize
 
 1. Add More Exercises:
 Edit data.js following this format:
@@ -72,7 +72,7 @@ Modify gradients in style.css:
     background: linear-gradient(135deg, #NEW_COLOR, #NEW_COLOR);
 }
 
-🤝 Contributing
+## 🤝 Contributing
 Fork the repository
 
 Create a feature branch (git checkout -b cool-feature)
@@ -83,7 +83,7 @@ Push to branch (git push origin cool-feature)
 
 Open a Pull Request
 
-📜 License
+## 📜 License
 MIT © MALAIKA TETA Celia
 
 
