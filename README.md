@@ -25,6 +25,7 @@ A **modern workout tracker** with exercise libraries, progress visualization, an
 ### Without Docker  
 # 1. Clone repo
 git clone https://github.com/cmalaikat16/fitness_pal.git
+
 cd fitness_pal
 
 # 2. Install live server (if needed)
