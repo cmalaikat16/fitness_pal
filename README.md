@@ -13,14 +13,22 @@ A **modern workout tracker** with exercise libraries, progress visualization, an
 ## 🛠 Tech Stack  
 **Frontend**:  
 - HTML5, CSS3 (Flexbox/Grid)  
-- Vanilla JavaScript (ES6+)  
-- SVG for exercise illustrations  
+- Vanilla JavaScript (ES6+)
+- Exercise DB API  
+- SVG for exercise illustrations
+
+## Setup Instructions 🚀
+
+## Prerequisites
+- GitHub account
+- Exercise DB API key (free tier available)
+ 
 
 **Infrastructure**:  
 - Docker containerization  
 - (Optional: Add backend if implemented later)  
 
-## 🚀 Quick Start  
+## 🚀 Installation  
 
 ### Without Docker  
 # 1. Clone repo
