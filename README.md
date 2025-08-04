@@ -35,7 +35,7 @@ npm install -g live-server
 live-server --port=3000
 
 ### With Docker 
-
+```bash
 # 1. Build image
 docker build -t fitness-pal .
 
@@ -43,8 +43,7 @@ docker build -t fitness-pal .
 docker run -dp 3000:3000 fitness-pal
 
 ## 📂 Project Structure
-
-fitness_pal/
+**fitness_pal/**
 ├── index.html          # Main app entry
 ├── style.css           # All styles
 ├── script.js           # Core functionality
@@ -53,8 +52,7 @@ fitness_pal/
 └── assets/             
 
 ## 🔧 How to Customize
-
-1. Add More Exercises:
+**1. Add More Exercises:**
 Edit data.js following this format:
 'chest': [
     {
@@ -66,25 +64,24 @@ Edit data.js following this format:
     }
 ]
 
-2. Change Styling:
+**2. Change Styling:**
 Modify gradients in style.css:
 .btn-green {
     background: linear-gradient(135deg, #NEW_COLOR, #NEW_COLOR);
 }
 
 ## 🤝 Contributing
-Fork the repository
+- **Fork the repository**
 
-Create a feature branch (git checkout -b cool-feature)
+- **Create a feature branch** (git checkout -b cool-feature)
 
-Commit changes (git commit -m 'Add awesome feature')
+- **Commit changes** (git commit -m 'Add awesome feature')
 
-Push to branch (git push origin cool-feature)
+- **Push to branch** (git push origin cool-feature)
 
-Open a Pull Request
 
 ## 📜 License
-MIT © MALAIKA TETA Celia
+**MIT © MALAIKA TETA Celia**
 
 
 
