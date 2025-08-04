@@ -10,6 +10,8 @@ WORKDIR /app
 # Install dependencies (if any)
 # RUN npm install
 
+ENV RAPIDAPI_KEY='e11ebaa611mshcabaae73e8bdde9p185160jsnc132412d7ede'
+
 # Copy the current directory contents into the container at /app
 COPY . .
 

@@ -10,18 +10,18 @@ A **modern workout tracker** with exercise libraries, progress visualization, an
 - **Mobile-First Design** works on all devices  
 - **Docker Support** for easy deployment  
 
-## 🛠 Tech Stack  
-**Frontend**:  
-- HTML5, CSS3 (Flexbox/Grid)  
-- Vanilla JavaScript (ES6+)
-- Exercise DB API  
+## 🛠 Tech Stack
+**FRONTEND**    
+- HTML CSS Support  
+- JavaScript ES6
+- Exercise DB Fitness Workout gym API  
 - SVG for exercise illustrations
 
 ## Setup Instructions 🚀
 
 ## Prerequisites
 - GitHub account
-- Exercise DB API key (free tier available)
+- Exercise DB Fitness Workout gym  API key (free tier available)
  
 
 **Infrastructure**:  
@@ -34,7 +34,10 @@ A **modern workout tracker** with exercise libraries, progress visualization, an
 # 1. Clone repo
 git clone https://github.com/cmalaikat16/fitness_pal.git
 
+I navigated in the cloned repo
 cd fitness_pal
+
+I got my API Key from  https://rapidapi.com/Alejandro99aru/api/exercise-db-fitness-workout-gym
 
 # 2. Install live server (if needed)
 npm install -g live-server
@@ -87,5 +90,5 @@ Modify gradients in style.css:
 ## 📜 License
 - **MIT © MALAIKA TETA Celia**
 
-
-
+For the Details; here is the link to my DEMO video 
+https://youtu.be/Dti2YpZnPyc

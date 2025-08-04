@@ -1,3 +1,45 @@
+// API Configuration (move this to the top of script.js)
+const EXERCISE_API = {
+    url: 'https://exercise-db-fitness-workout-gym.p.rapidapi.com/exercises',
+    options: {
+      method: 'GET',
+      headers: {
+        'x-rapidapi-key': 'e11ebaa611mshcabaae73e8bdde9p185160jsnc132412d7ede',
+        'x-rapidapi-host': 'exercise-db-fitness-workout-gym.p.rapidapi.com'
+      }
+    }
+  };
+  
+  // Cache for storing API responses
+  const exerciseCache = {};
+  
+  // Fetch exercises by body part (e.g., "chest", "back")
+  async function fetchExercises(bodyPart) {
+    // Return cached data if available
+    if (exerciseCache[bodyPart]) {
+      return exerciseCache[bodyPart];
+    }
+  
+    try {
+      const response = await fetch(EXERCISE_API.url, EXERCISE_API.options);
+      if (!response.ok) throw new Error('API request failed');
+      
+      const allExercises = await response.json();
+      const filteredExercises = allExercises.filter(ex => 
+        ex.bodyPart.toLowerCase() === bodyPart.toLowerCase()
+      );
+  
+      // Cache the results
+      exerciseCache[bodyPart] = filteredExercises;
+      return filteredExercises;
+  
+    } catch (error) {
+      console.error("API Error:", error);
+      showNotification("Using backup exercise data");
+      return sampleWorkouts[bodyPart] || []; // Fallback to your hardcoded data
+    }
+  }
+
 // DOM Elements
 const welcomePage = document.getElementById('welcome-page');
 const authPage = document.getElementById('auth-page');
@@ -82,7 +124,48 @@ function showWorkoutSelection() {
     authPage.classList.add('hidden');
     workoutSelectionPage.classList.remove('hidden');
 }
-
+async function showWorkoutDetails(target) {
+    workoutSelectionPage.classList.add('hidden');
+    workoutDetailsPage.classList.remove('hidden');
+    
+    document.getElementById('workout-category-title').textContent = 
+      `${target.charAt(0).toUpperCase() + target.slice(1)} Exercises`;
+  
+    const exercisesContainer = document.getElementById('workout-exercises');
+    exercisesContainer.innerHTML = '<div class="loading">Loading exercises...</div>';
+  
+    // Fetch from API or fallback
+    const exercises = await fetchExercises(target);
+  
+    if (exercises.length === 0) {
+      exercisesContainer.innerHTML = '<p>No exercises found. Try another category.</p>';
+      return;
+    }
+  
+    exercisesContainer.innerHTML = '';
+    exercises.forEach(exercise => {
+      const exerciseCard = document.createElement('div');
+      exerciseCard.className = 'exercise-card';
+      
+      exerciseCard.innerHTML = `
+        <div class="exercise-img-container">
+          <img src="${exercise.gifUrl}" alt="${exercise.name}">
+        </div>
+        <div class="exercise-content">
+          <h3 class="exercise-name">${exercise.name}</h3>
+          <div class="exercise-detail">
+            <span class="detail-label">Equipment:</span>
+            <span class="detail-value">${exercise.equipment}</span>
+          </div>
+          <div class="exercise-detail">
+            <span class="detail-label">Target:</span>
+            <span class="detail-value">${exercise.target}</span>
+          </div>
+        </div>
+      `;
+      exercisesContainer.appendChild(exerciseCard);
+    });
+  }
 // Show workout details
 function showWorkoutDetails(target) {
     workoutSelectionPage.classList.add('hidden');
