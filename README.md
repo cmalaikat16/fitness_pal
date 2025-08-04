@@ -50,18 +50,7 @@ fitness_pal/
 ├── script.js           # Core functionality
 ├── data.js             # Exercise database
 ├── Dockerfile          # Container config
-└── assets/             # (Add if you have images)
-
-🖼️ Screenshots
-
-Welcome Screen
-Screenshot 2025-08-04 at 5.54.21 PM
-
-Workout Selection
-Screenshot 2025-08-04 at 6.05.28 PM
-
-Exercise Details
-https://screenshots/details.png
+└── assets/             
 
 🔧 How to Customize
 
