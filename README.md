@@ -43,16 +43,16 @@ docker build -t fitness-pal .
 docker run -dp 3000:3000 fitness-pal
 
 ## 📂 Project Structure
-**fitness_pal/**
-├── index.html          # Main app entry
-├── style.css           # All styles
-├── script.js           # Core functionality
-├── data.js             # Exercise database
-├── Dockerfile          # Container config
-└── assets/             
+- **fitness_pal/**
+- ├── index.html          # Main app entry
+- ├── style.css           # All styles
+- ├── script.js           # Core functionality
+- ├── data.js             # Exercise database
+- ├── Dockerfile          # Container config
+- └── assets/             
 
 ## 🔧 How to Customize
-**1. Add More Exercises:**
+- **1. Add More Exercises:**
 Edit data.js following this format:
 'chest': [
     {
@@ -64,7 +64,7 @@ Edit data.js following this format:
     }
 ]
 
-**2. Change Styling:**
+- **2. Change Styling:**
 Modify gradients in style.css:
 .btn-green {
     background: linear-gradient(135deg, #NEW_COLOR, #NEW_COLOR);
@@ -72,16 +72,13 @@ Modify gradients in style.css:
 
 ## 🤝 Contributing
 - **Fork the repository**
-
 - **Create a feature branch** (git checkout -b cool-feature)
-
 - **Commit changes** (git commit -m 'Add awesome feature')
-
 - **Push to branch** (git push origin cool-feature)
 
 
 ## 📜 License
-**MIT © MALAIKA TETA Celia**
+- **MIT © MALAIKA TETA Celia**
 
 
 
