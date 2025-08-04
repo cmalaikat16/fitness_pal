@@ -23,7 +23,6 @@ A **modern workout tracker** with exercise libraries, progress visualization, an
 ## 🚀 Quick Start  
 
 ### Without Docker  
-```bash
 # 1. Clone repo
 git clone https://github.com/cmalaikat16/fitness_pal.git
 cd fitness_pal
@@ -35,7 +34,6 @@ npm install -g live-server
 live-server --port=3000
 
 ### With Docker 
-```bash
 # 1. Build image
 docker build -t fitness-pal .
 
